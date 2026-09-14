@@ -1,6 +1,34 @@
 # Robinhood Benchmarks
 
-Reproducible Python tools for comparing Node1 with Robinhood's public feed and direct sequencer submission paths. This repository contains code only; credentials, infrastructure configuration, wallet identifiers and historical raw results are excluded.
+Reproducible Python tools for comparing Node1 with Robinhood's public feed and direct sequencer submission paths. This repository contains benchmark tools and aggregate findings; credentials, infrastructure configuration, wallet identifiers and historical raw results are excluded.
+
+## Benchmark results
+
+### Feed — Ohio · September 12, 2026
+
+**Node1 delivered matching messages 47.62 ms earlier at the median in Ohio 2b and 59.00 ms earlier in Ohio 2c**, compared with the official Robinhood mainnet Feed.
+
+| Location | Median arrival lead | Node1 first-arrival rate | Matched messages |
+| --- | ---: | ---: | ---: |
+| Ohio 2b | **47.62 ms** | **99.989%** | 17,514 |
+| Ohio 2c | **59.00 ms** | **99.949%** | 17,512 |
+
+Each location completed six five-minute windows, totaling 30 minutes of effective sampling. Both feeds were received simultaneously on the same host and paired by sequence number and verified content. No single-feed-only messages or content mismatches were observed during measurement and matching. Arrival lead is official receipt time minus Node1 receipt time, not absolute sequencer latency.
+
+### Landing — Frankfurt · September 14, 2026
+
+**Node1 won 66 of 100 on-chain transaction races from Frankfurt**, versus 34 wins through direct official sequencer endpoints.
+
+| Submission path | Winning transactions | Win rate |
+| --- | ---: | ---: |
+| Node1 Ohio 2b | 38 | 38% |
+| Node1 Ohio 2c | 28 | 28% |
+| **Node1 combined — two entry points** | **66** | **66%** |
+| **Direct official sequencer — three entry points** | **34** | **34%** |
+
+Five paths simultaneously submitted distinct pre-signed candidates sharing the same sender, nonce and gas settings. Successful on-chain transaction hashes determined winners, not HTTP response times. All 100 rounds were retained; maximum application-level send-start skew was 18.889 µs.
+
+These findings cover the stated locations and test periods. Landing is a same-nonce competition affected by admission/replacement rules and Node1 internal fan-out; its win rate cannot be converted to a millisecond advantage. Neither test establishes performance across all regions or guarantees future results.
 
 ## Setup
 
