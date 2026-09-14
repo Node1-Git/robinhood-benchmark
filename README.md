@@ -17,16 +17,16 @@ Each location completed six five-minute windows, totaling 30 minutes of effectiv
 
 ### Landing — Frankfurt and Ohio · September 14, 2026
 
-**Node1 won 66 of 100 on-chain races from Frankfurt and 61 of 100 from Ohio 2b.**
+**Node1 won 66 of 100 on-chain races from Frankfurt and 61 of 100 from Ohio.**
 
-| Submission path | Frankfurt origin | Ohio 2b origin |
+| Submission path | Frankfurt origin | Ohio origin |
 | --- | ---: | ---: |
 | Node1 Ohio 2b | 38% | 43% |
 | Node1 Ohio 2c | 28% | 18% |
 | **Node1 combined — two entry points** | **66%** | **61%** |
 | **Direct official sequencer — three entry points** | **34%** | **39%** |
 
-At each location, five paths simultaneously submitted distinct pre-signed candidates sharing sender, nonce and gas settings. Successful on-chain hashes determined winners, not HTTP response times. All 100 rounds per location were retained. Maximum application-level send-start skew was 18.889 µs in Frankfurt and 0.700 µs in Ohio 2b. The two locations were tested in separate sessions.
+At each location, five paths simultaneously submitted distinct pre-signed candidates sharing sender, nonce and gas settings. Successful on-chain hashes determined winners, not HTTP response times. All 100 rounds per location were retained. Maximum application-level send-start skew was 18.889 µs in Frankfurt and 0.700 µs in Ohio. The two locations were tested in separate sessions.
 
 These findings cover the stated locations and test periods. Landing is a same-nonce competition affected by admission/replacement rules and Node1 internal fan-out; its win rate cannot be converted to a millisecond advantage. Neither test establishes performance across all regions or guarantees future results.
 
