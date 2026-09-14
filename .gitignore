@@ -1,0 +1,46 @@
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+secrets/
+*.local
+*.local.*
+*private*key*
+*api*key*
+*token*
+*uuid*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Run artifacts can contain wallet identifiers, signed transactions and endpoints
+data/
+results*/
+runs/
+transactions.json
+candidate-hashes.json
+*.jsonl
+*.frames
+*.csv
+*.log
+*.lock
+*.tmp
+*.tar
+*.tar.gz
+*.zip
+
+# Python and editor files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+.idea/
+.vscode/
+
+# Generated JSON and local databases
+*.json
+*.sqlite*
+*.db
