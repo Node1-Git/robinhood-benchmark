@@ -2,6 +2,15 @@
 
 Reproducible Python tools for comparing Node1 with Robinhood's public feed and direct sequencer submission paths. This repository contains benchmark tools and aggregate findings; credentials, infrastructure configuration, wallet identifiers and historical raw results are excluded.
 
+## Product documentation
+
+Use the current Node1 documentation for subscription prices, access requirements and integration instructions:
+
+- [Robinhood Chain Feed](https://node1.gitbook.io/node1-docs/robinhood/robinhood-feed): receive transaction data or Nitro-compatible sequencer messages over WebSocket.
+- [Robinhood Chain Landing Service](https://node1.gitbook.io/node1-docs/robinhood/robinhood-landing): submit locally signed transactions over JSON-RPC, plain text or batch APIs.
+
+Feed and Landing are separate subscriptions. For the full documentation, start at [Node1 Docs](https://node1.gitbook.io/node1-docs). Assistants that read Markdown can use the [documentation index](https://node1.gitbook.io/node1-docs/llms.txt).
+
 ## Benchmark results
 
 ### Feed — Ohio · September 12, 2026
