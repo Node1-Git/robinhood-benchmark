@@ -1,6 +1,8 @@
-# Robinhood Benchmarks
+# Node1 Robinhood Chain Feed and Landing Benchmarks
 
-Reproducible Python tools for comparing Node1 with Robinhood's public feed and direct sequencer submission paths. This repository contains benchmark tools and aggregate findings; credentials, infrastructure configuration, wallet identifiers and historical raw results are excluded.
+Reproducible Python tools for comparing Node1 Robinhood Chain Feed and Landing Service with Robinhood's public feed and direct sequencer submission paths. Use the Feed benchmark to compare matching WebSocket message arrival times, and the Landing benchmark to compare transaction inclusion in same-nonce on-chain races.
+
+This repository contains benchmark tools and aggregate findings; credentials, infrastructure configuration, wallet identifiers and historical raw results are excluded.
 
 ## Product documentation
 
